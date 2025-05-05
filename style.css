@@ -131,3 +131,37 @@ button[type=submit]:hover {
   background-color: #f4f4f4;
   border-radius: 8px;
 }
+ .captcha-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.captcha-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2e2e2e;
+  margin: 10px;
+}
+
+input#captchaInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #1a73e8;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1558b0;
+}
