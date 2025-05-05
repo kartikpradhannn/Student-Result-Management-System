@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Result Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <div class="dropdown">
+      <a href="#">Student</a>
+      <div class="dropdown-content">
+        <a href="#">Examination</a>
+        <a href="#">Scholarship</a>
+        <a href="#">Rewards</a>
+        <a href="#">Admissions</a>
+        <a href="#">Results</a>
+      </div>
+    </div>
+    <a href="#">Faculties</a>
+    <a href="#">Admin</a>
+  </div>
+
+  <div class="slideshow">
+    <img src="https://source.unsplash.com/800x300/?students,classroom" alt="Slideshow">
+  </div>
+
+  <div class="container">
+    <h1>Student Result Management System</h1>
+    <div class="tabs">
+      <button onclick="showTab('admin')">Admin Panel</button>
+      <button onclick="showTab('student')">Student Login</button>
+    </div>
+
+    <div id="admin" class="tab">
+      <h2>Admin - Submit Result</h2>
+      <form id="adminForm">
+        <input type="text" id="a_enroll" placeholder="Enrollment No" required />
+        <input type="text" id="a_name" placeholder="Student Name" required />
+        <input type="number" id="a_math" placeholder="Math Marks" required />
+        <input type="number" id="a_science" placeholder="Science Marks" required />
+        <input type="number" id="a_english" placeholder="English Marks" required />
+        <input type="text" id="a_password" placeholder="Password" required />
+        <input type="text" id="a_key" placeholder="Security Key" required />
+        <button type="submit">Submit Result</button>
+      </form>
+    </div>
+
+    <div id="student" class="tab" style="display: none;">
+      <h2>Student - Check Result</h2>
+      <form id="studentForm">
+        <input type="text" id="s_enroll" placeholder="Enrollment No" required />
+        <input type="text" id="s_password" placeholder="Password" required />
+        <input type="text" id="s_key" placeholder="Security Key" required />
+        <button type="submit">View Result</button>
+      </form>
+      <div id="resultDisplay"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
