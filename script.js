@@ -43,7 +43,34 @@ function loadSubjects() {
     });
   }
 }
+let captchaText = "";
 
+function generateCaptcha() {
+  // Generate a random string of letters and numbers
+  captchaText = Math.random().toString(36).substring(2, 8).toUpperCase();
+  
+  // Display the CAPTCHA text
+  document.getElementById("captchaText").innerText = captchaText;
+}
+
+document.getElementById("studentForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  
+  const userInput = document.getElementById("captchaInput").value;
+  
+  // Check if the entered CAPTCHA matches the generated one
+  if (userInput.toUpperCase() === captchaText) {
+    alert("CAPTCHA verified! Proceeding with result submission.");
+    // Proceed with result submission logic
+  } else {
+    alert("CAPTCHA incorrect! Please try again.");
+    generateCaptcha();  // Regenerate CAPTCHA
+  }
+});
+
+// Initial CAPTCHA generation on page load
+generateCaptcha();
+ 
 document.getElementById("adminForm").addEventListener("submit", function (e) {
   e.preventDefault();
   alert("Result submitted successfully!");
