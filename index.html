@@ -99,9 +99,15 @@
       <form id="studentForm">
         <input type="text" id="s_enroll" placeholder="Enrollment No" required />
         <input type="text" id="s_password" placeholder="Password" required />
-        <input type="text" id="s_key" placeholder="Security Key" required />
         <button type="submit">View Result</button>
       </form>
+      <div class="captcha-container">
+  <label for="captcha">Security Key (Please type the text below):</label>
+  <div id="captchaText" class="captcha-text"></div>
+  <input type="text" id="captchaInput" placeholder="Enter the text" required />
+  <button type="button" onclick="generateCaptcha()">Generate New Captcha</button>
+</div>
+
       <div id="resultDisplay"></div>
     </div>
   </div>
